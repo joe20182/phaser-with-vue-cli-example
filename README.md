@@ -1,4 +1,6 @@
 # phaser-with-vue-cli-example
+參考此專案 https://gitlab.com/winnie-slides/2019/nuxt-phaser-games-examples<br>
+嘗試在Vue-CLI架構中也能高效的使用phaser.js
 
 ## Project setup
 ```
