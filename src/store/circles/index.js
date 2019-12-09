@@ -12,6 +12,12 @@ const circles = {
   mutations: {
     ADD_CIRCLE: (state, circleData) => {
       state.circles.push(circleData);
+    },
+    MOVE_CIRCLES(state) {
+      state.circles = state.circles.map((circle) => {
+        const { x, y } = Phaser.Geom.Rectangle.Random(bounds)
+        return { ...circle, x, y }
+      })
     }
   },
   actions: {
@@ -19,6 +25,9 @@ const circles = {
       const { x, y } = Phaser.Geom.Rectangle.Random(bounds);
       const color = parseColor("#aa00ff");
       commit("ADD_CIRCLE", { x, y, radius, color });
+    },
+    moveCircles({ commit }) {
+      commit("MOVE_CIRCLES");
     }
   },
   namespaced: true

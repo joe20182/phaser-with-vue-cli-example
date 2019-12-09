@@ -2,6 +2,7 @@
   <div id="game-page">
     {{ msg }}
     <button type="button" @click="addCircle">Add circle #{{ circles.length + 1 }}</button>
+    <button @click="moveCircles">move it</button>
   </div>
 </template>
 
@@ -24,7 +25,7 @@ export default {
     this.game = createGame(this.$el, this.$store);
   },
   methods: {
-    ...mapActions("circles", ["addCircle"])
+    ...mapActions("circles", ["addCircle", "moveCircles"])
   },
   beforeDestroy() {
     this.game.destroy();
