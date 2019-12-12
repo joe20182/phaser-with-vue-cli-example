@@ -10,7 +10,7 @@ const circles = {
     circles: []
   },
   mutations: {
-    ADD_CIRCLE: (state, circleData) => {
+    ADD_CIRCLE(state, circleData) {
       state.circles.push(circleData);
     },
     MOVE_CIRCLES(state) {
