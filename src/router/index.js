@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Game from '../views/Game'
+import Index from '../views/Index'
 
 Vue.use(VueRouter)
 
@@ -8,7 +8,11 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Game
+    component: Index
+  },
+  {
+    path: '/Game',
+    component: () => import('@/views/Game')
   },
   {
     path: '/PhaserInStroe',
