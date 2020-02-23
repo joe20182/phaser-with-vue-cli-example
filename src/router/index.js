@@ -9,6 +9,10 @@ const routes = [
     path: '/',
     name: 'home',
     component: Game
+  },
+  {
+    path: '/PhaserInStroe',
+    component: () => import('@/views/PhaserInStore')
   }
 ]
 
